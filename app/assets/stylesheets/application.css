@@ -23,3 +23,23 @@
     background-color: black;
  }
 
+ .blockquote-footer{
+    background-color: white;
+ }
+
+ footer{
+    background-color: black;
+    color: #818181;
+ }
+
+ footer a{
+    color: #818181;
+ }
+
+ hr{
+    background-color: #818181;
+ }
+
+
+
+
