@@ -12,6 +12,11 @@
     <!-- AOS CSS Animate -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <!-- Animate css cdn with wow javascript plug in with animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"/>
+
+
+
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -23,7 +28,12 @@
     
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-  
+    <!-- wow javascript plug in with animate css -->
+    <script src="assets/wow.min.js"></script>
+    <script> 
+        new WOW().init(); 
+    </script>
+    
 
   </head>
 
@@ -33,11 +43,13 @@
     <%= yield %>
     <%= render 'layouts/footer' %>
 
-    <%# AOS Animated CSS Script %>
+    <%# AOS Animated scroll CSS Script%>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-    AOS.init();
+        AOS.init();
     </script>
+
+    
 
   </body>
 </html>
