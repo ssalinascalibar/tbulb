@@ -6,8 +6,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Google Analytics -->
-    <%= render 'layouts/google_analytics' %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLECYJC6PL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FLECYJC6PL');
+
+      document.addEventListener('turbolinks:load', event => {
+        if (typeof gtag === 'function') {
+          gtag('config', 'G-FLECYJC6PL', {
+            'page_location': event.data.url
+          });
+        }
+      });
+    </script>
 
     <!-- bootstrap  CSS 4.5.0 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
